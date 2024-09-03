@@ -18,7 +18,8 @@
 
     <h1>Job Form</h1>
     
-    <form id="sampleForm" action="https://5f96-2400-2410-c863-9500-748e-dd26-1ff0-c1af.ngrok-free.app/v1.0/app/submit" method="POST">
+<!--     <form id="sampleForm" action="https://5f96-2400-2410-c863-9500-748e-dd26-1ff0-c1af.ngrok-free.app/v1.0/app/submit" method="POST"> -->
+    <form id="sampleForm">
 
         <!-- Text Input -->
         <label for="name">Name:</label><br>
@@ -59,34 +60,36 @@
     </form>
 
     <script>
-      const form = document.getElementById('sampleForm');
+      // const form = document.getElementById('sampleForm');
 
-      // Add an event listener for the submit event
-      form.addEventListener('submit', function(event) {
-          // Prevent the default form submission behavior
-          event.preventDefault();
+      // // Add an event listener for the submit event
+      // form.addEventListener('submit', function(event) {
+      //     // Prevent the default form submission behavior
+      //     event.preventDefault();
   
-          // You can add custom code here to handle the form data
-          console.log('Form is being submitted...');
+      //     // You can add custom code here to handle the form data
+      //     console.log('Form is being submitted...');
   
-          // Optionally, submit the form manually
-          // form.submit();
-      });
-        // document.getElementById('sampleForm').onsubmit = function(event) {
-        //     event.preventDefault(); // Prevent the default form submission (page reload)
+      //     // Optionally, submit the form manually
+      //     // form.submit();
+      // });
 
-        //     // Capture form data
-        //     var formData = new FormData(this);
+      
+        document.getElementById('sampleForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission (page reload)
 
-        //     // You can process the form data here (e.g., send it to a server via AJAX)
-        //     console.log('Form submitted');
-        //     console.log('Name:', formData.get('name'));
-        //     console.log('Email:', formData.get('email'));
-        //     console.log('Message:', formData.get('message'));
+            // Capture form data
+            var formData = new FormData(this);
 
-        //     // Optionally, you can show a message to the user
-        //     alert('Form submitted successfully!');
-        // };
+            // You can process the form data here (e.g., send it to a server via AJAX)
+            console.log('Form submitted');
+            console.log('Name:', formData.get('name'));
+            console.log('Email:', formData.get('email'));
+            console.log('Message:', formData.get('message'));
+
+            // Optionally, you can show a message to the user
+            // alert('Form submitted successfully!');
+        };
     </script>
     
   </body>
