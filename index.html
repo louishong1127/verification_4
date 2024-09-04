@@ -60,19 +60,19 @@
     </form>
 
     <script>
-      // const form = document.getElementById('sampleForm');
+      const form = document.getElementById('sampleForm');
 
-      // // Add an event listener for the submit event
-      // form.addEventListener('submit', function(event) {
-      //     // Prevent the default form submission behavior
-      //     event.preventDefault();
+      // Add an event listener for the submit event
+      form.addEventListener('submit', function(event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
   
-      //     // You can add custom code here to handle the form data
-      //     console.log('Form is being submitted...');
+          // You can add custom code here to handle the form data
+          console.log('Form is being submitted...');
   
-      //     // Optionally, submit the form manually
-      //     // form.submit();
-      // });
+          // Optionally, submit the form manually
+          form.submit();
+      });
 
       
         // document.getElementById('sampleForm').onsubmit = function(event) {
