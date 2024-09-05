@@ -60,34 +60,34 @@
     </form>
 
     <script>
-      const form = document.getElementById('sampleForm');
+      // const form = document.getElementById('sampleForm');
 
-      // Add an event listener for the submit event
-      form.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the form from submitting the traditional way
+      // // Add an event listener for the submit event
+      // form.addEventListener('submit', function(event) {
+      //     event.preventDefault(); // Prevent the form from submitting the traditional way
 
-          var form = event.target; // Get the form element
-          var formData = new FormData(form); // Create a FormData object
+      //     var form = event.target; // Get the form element
+      //     var formData = new FormData(form); // Create a FormData object
         
-          fetch(form.action, {
-            method: form.method, // Use the form's method (POST in this case)
-            body: formData, // Send the form data
-          })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json(); // Parse the JSON response (if applicable)
-          })
-          .then(data => {
-            console.log('Success:', data);
-            // Handle the response data here (e.g., show a success message)
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            // Handle errors here (e.g., show an error message)
-          });
-      });
+      //     fetch(form.action, {
+      //       method: form.method, // Use the form's method (POST in this case)
+      //       body: formData, // Send the form data
+      //     })
+      //     .then(response => {
+      //       if (!response.ok) {
+      //         throw new Error('Network response was not ok');
+      //       }
+      //       return response.json(); // Parse the JSON response (if applicable)
+      //     })
+      //     .then(data => {
+      //       console.log('Success:', data);
+      //       // Handle the response data here (e.g., show a success message)
+      //     })
+      //     .catch(error => {
+      //       console.error('Error:', error);
+      //       // Handle errors here (e.g., show an error message)
+      //     });
+      // });
     </script>
     
   </body>
