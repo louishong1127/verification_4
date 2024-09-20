@@ -60,6 +60,10 @@
     </form>
 
     <script>
+      document.getElementsByName("email")[0].addEventListener('change', function (e) {
+        console.log(123);
+        console.log(e);
+      });
       // const form = document.getElementById('sampleForm');
 
       // // Add an event listener for the submit event
